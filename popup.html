@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Gemini Table</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Table Extractor</h1>
+
+    <div id="status" class="status"></div>
+
+    <div id="not-youtube" class="error hidden">
+      YouTube 페이지에서만 사용할 수 있습니다.
+    </div>
+
+    <div id="main-content" class="hidden">
+      <div class="video-info">
+        <p><strong>현재 영상:</strong></p>
+        <p id="video-title" class="video-title"></p>
+      </div>
+
+      <div class="prompt-section">
+        <label for="prompt">프롬프트:</label>
+        <textarea id="prompt" rows="3" placeholder="예: 이 영상에서 언급된 제품들을 테이블로 정리해줘">이 영상의 주요 내용을 테이블 형식으로 정리해줘.</textarea>
+      </div>
+
+      <button id="extract-btn" class="btn-primary">
+        Gemini에서 열기
+      </button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

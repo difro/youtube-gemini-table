@@ -6,7 +6,7 @@ YouTube 영상 페이지에서 Gemini AI를 활용해 영상 내용을 테이블
 
 - YouTube 영상 페이지에서만 동작
 - 현재 영상 URL과 사용자 프롬프트를 Gemini에 전달
-- gemini.google.com에서 자동으로 프롬프트 입력
+- 팝업 윈도우로 Gemini 페이지를 열어 자동으로 프롬프트 입력
 
 ## 설치 방법
 
@@ -29,16 +29,14 @@ YouTube 영상 페이지에서 Gemini AI를 활용해 영상 내용을 테이블
 2. 확장 프로그램 아이콘 클릭
 3. 프롬프트 입력 (예: "이 영상에서 언급된 제품들을 테이블로 정리해줘")
 4. **"Gemini에서 열기"** 버튼 클릭
-5. Gemini 페이지가 열리면서 자동으로 프롬프트가 입력됨
+5. Gemini 팝업 윈도우가 열리면서 자동으로 프롬프트가 입력됨
 
 ## 파일 구조
 
 ```
-├── manifest.json       # Chrome 확장 프로그램 설정
-├── popup.html          # 팝업 UI
-├── popup.js            # 팝업 로직
-├── popup.css           # 스타일
-├── gemini-inject.js    # Gemini 페이지 프롬프트 주입
+├── manifest.json       # Chrome 확장 프로그램 설정 (Manifest V3)
+├── popup.html/js/css   # 확장 프로그램 팝업 UI
+├── gemini-inject.js    # Gemini 페이지 프롬프트 자동 입력
 └── icons/              # 아이콘
 ```
 

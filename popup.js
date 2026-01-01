@@ -51,8 +51,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Save prompt for next time
     localStorage.setItem('saved_prompt', userPrompt);
 
-    // Open Gemini with prompt in URL hash
+    // Open Gemini in a popup window
     const geminiUrl = `https://gemini.google.com/app#prompt=${encodeURIComponent(fullPrompt)}`;
-    chrome.tabs.create({ url: geminiUrl });
+    chrome.windows.create({
+      url: geminiUrl,
+      type: 'popup',
+      width: 800,
+      height: 900
+    });
   });
 });
